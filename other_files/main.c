@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 			printf("%lu = %lu*%d\n", n, n / 2, 2);
 		else
 		{
-			for (i = 3; i * i < n; i += 2)
+			for (i = 3; i * i <= n; i += 2)
 			{
 				if (n % i == 0)
 				{
