@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
 		free(ptr);
 		ptr = NULL;
 	}
+	free(ptr);
 	fclose(op);
 	return (0);
 }
