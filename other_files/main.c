@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		printf("Usage: %s <file>", argv[0]);
+		printf("Usage: %s <file>\n", argv[0]);
 		return (1);
 	}
 	op = fopen(argv[1], "r");
@@ -24,14 +24,14 @@ int main(int argc, char *argv[])
 			break;
 		n = strtoull(ptr, &eptr, 10);
 		if (n % 2 == 0)
-			printf("%lu = %lu * %d\n", n, n / 2, 2);
+			printf("%lu = %lu*%d\n", n, n / 2, 2);
 		else
 		{
-			for (i = 3; i < n; i += 2)
+			for (i = 3; i * i < n; i += 2)
 			{
 				if (n % i == 0)
 				{
-					printf("%lu = %lu * %lu\n", n, n / i, i);
+					printf("%lu=%lu*%lu\n", n, n / i, i);
 					break;
 				}
 			}
